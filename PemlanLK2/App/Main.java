@@ -128,7 +128,7 @@ public class Main {
         Kendaraan kendaraan = null;
 
         while (true) {
-            System.out.println("=========== Menu Aplikasi ===========");
+            System.out.println("Menu Aplikasi:");
             System.out.println("1. Buat Kendaraan");
             System.out.println("2. Naik Penumpang");
             System.out.println("3. Turun Penumpang");
@@ -138,7 +138,6 @@ public class Main {
             System.out.println("7. Keluar");
             System.out.print("Pilih: ");
             int pilihan = scanner.nextInt();
-            System.out.println("===================================");
             scanner.nextLine(); // consume newline
 
             switch (pilihan) {
@@ -155,11 +154,11 @@ public class Main {
                         int jumlahPintu = scanner.nextInt();
                         kendaraan = new Bus(platNomor, kapasitas, jumlahPintu);
                     } else if (jenisKendaraan.equalsIgnoreCase("Truk")) {
-                        System.out.print("Masukkan muatan maksimal: ");
+                        System.out.print("Masukkan jenis muatan maksimal: ");
                         String muatanMaks = scanner.next();
                         kendaraan = new Truk(platNomor, kapasitas, muatanMaks);
                     } else {
-                        System.out.println("!! Jenis kendaraan tidak valid !!");
+                        System.out.println("Jenis kendaraan tidak valid");
                     }
                     break;
                 case 2:
