@@ -35,12 +35,6 @@ class Kendaraan {
         }
     }
 
-    void naik(String... penumpangBaru) throws Exception {
-        for (String p : penumpangBaru) {
-            naik(p);
-        }
-    }
-
     void turun(String penumpangTurun) throws Exception {
         if (!penumpang.contains(penumpangTurun)) {
             throw new Exception("Penumpang tidak ditemukan");
